@@ -1,0 +1,161 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilo para el encabezado */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo para la sección de introducción */
+section#introduccion {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de los párrafos */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los ejemplos */
+.example {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos de los ejemplos */
+.example h3 {
+    color: #2980b9;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Estilo para los inputs de texto */
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Estilo para el formulario */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para mensajes de validación */
+#formMessage, #validacionMensaje {
+    font-size: 16px;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* Estilo para el texto que cambia de color */
+#textToChange {
+    font-size: 16px;
+    color: #7f8c8d;
+    transition: color 0.3s ease;
+}
+
+/* Estilos adicionales */
+code {
+    background-color: #ecf0f1;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Enlaces */
+a#mienlace {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+a#mienlace:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos para los ejemplos con interacción */
+div.example button {
+    margin-top: 10px;
+}
+
+div.example p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* Caja de color */
+#colorBox {
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#colorBox p {
+    margin: 0;
+}

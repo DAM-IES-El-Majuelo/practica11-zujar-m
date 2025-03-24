@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materialize</title>
+    <!-- Enlazando con Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://via.placeholder.com/32" type="image/ico">
+    <link rel="icon" href="images/materialize.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #00796b;
+        }
+
+        .hero-section {
+            background-color: #80deea;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .card-title {
+            color: #004d40;
+        }
+
+        .footer {
+            background-color: #00796b;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            color: #004d40;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .btn-custom {
+            background-color: #ff4081;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #f50057;
+        }
+
+        .accordion-section {
+            margin-top: 50px;
+        }
+
+        /* Galería con transición automática */
+        .gallery-container {
+            position: relative;
+        }
+
+        .gallery-slides {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .gallery-slide {
+            min-width: 100%;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Interactividad Web</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contáctanos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="white-text">Bienvenido a la Página Interactiva</h1>
+            <p class="white-text">Explora nuestros servicios y descubre todo lo que podemos hacer por ti.</p>
+            <a href="#services" class="btn btn-custom btn-large waves-effect waves-light">Ver Servicios</a>
+        </div>
+    </section>
+
+    <!-- Galería de imágenes (con transición automática) -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Galería de Imágenes</h2>
+            <div class="gallery-container">
+                <div class="gallery-slides">
+                    <div class="gallery-slide">
+                        <img src="images/m1.png" class="gallery-img responsive-img" alt="Imagen 1">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/m2.png" class="gallery-img responsive-img" alt="Imagen 2">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/m3.png" class="gallery-img responsive-img" alt="Imagen 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Qué es Materialize -->
+    <section id="materialize" class="section">
+        <div class="container">
+            <h2 class="section-title">¿Qué es Materialize?</h2>
+            <p><strong>Materialize</strong> es un framework front-end basado en Material Design, desarrollado por Google. Su objetivo es proporcionar un diseño limpio, consistente y de fácil uso para la creación de interfaces de usuario interactivas. Materialize incluye una variedad de componentes listos para usar, como botones, tarjetas, modales, formularios y muchos más, que siguen las directrices del Material Design de Google.</p>
+
+            <h3>¿Para qué se usa Materialize?</h3>
+            <ul>
+                <li><strong>Diseño Visual:</strong> Materialize facilita la creación de interfaces visualmente atractivas y consistentes mediante el uso de componentes listos para usar que siguen los principios de Material Design.</li>
+                <li><strong>Desarrollo Rápido:</strong> Al ofrecer una gran cantidad de componentes y estilos prediseñados, los desarrolladores pueden crear páginas web y aplicaciones web de manera rápida sin tener que escribir mucho código CSS.</li>
+                <li><strong>Compatibilidad Móvil:</strong> Materialize está diseñado para ser completamente adaptable y trabajar de manera efectiva en dispositivos móviles y de escritorio.</li>
+                <li><strong>Animaciones y Transiciones:</strong> El framework incluye animaciones y transiciones predefinidas para mejorar la experiencia del usuario y hacer que las interacciones sean más fluidas y atractivas.</li>
+            </ul>
+
+            <h3>Ventajas de usar Materialize</h3>
+            <ul>
+                <li>Componentes predefinidos: Botones, modales, tablas, formularios y más.</li>
+                <li>Facilidad de uso: Materialize es muy sencillo de integrar y usar, con una documentación clara y ejemplos prácticos.</li>
+                <li>Diseño responsivo: Todas las interfaces construidas con Materialize son completamente responsivas y adaptativas a distintos tamaños de pantalla.</li>
+                <li>Consistencia visual: Los elementos de la interfaz siguen una misma guía de estilo, asegurando que todos los elementos en la aplicación se vean bien y funcionen de manera coherente.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Acordeón -->
+    <section class="accordion-section section">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header">¿Qué servicios ofrecen?</div>
+                    <div class="collapsible-body"><span>Ofrecemos desarrollo web, diseño gráfico, y consultoría tecnológica.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">¿Cómo contacto con ustedes?</div>
+                    <div class="collapsible-body"><span>Puedes contactarnos a través del formulario de contacto en la sección inferior.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header">¿Tienen atención personalizada?</div>
+                    <div class="collapsible-body"><span>Sí, ofrecemos atención personalizada para cada proyecto.</span></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <form>
+                <div class="input-field">
+                    <input id="name" type="text" class="validate" required>
+                    <label for="name">Tu Nombre</label>
+                </div>
+                <div class="input-field">
+                    <input id="email" type="email" class="validate" required>
+                    <label for="email">Tu Correo Electrónico</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="message" class="materialize-textarea" required></textarea>
+                    <label for="message">Tu Mensaje</label>
+                </div>
+                <button type="submit" class="btn btn-custom waves-effect waves-light">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Página Interactiva</p>
+        <p>Síguenos en nuestras redes sociales</p>
+        <a href="https://www.facebook.com" target="_blank" class="btn-floating btn-large waves-effect waves-light red"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank" class="btn-floating btn-large waves-effect waves-light blue"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank" class="btn-floating btn-large waves-effect waves-light pink"><i class="fab fa-instagram"></i></a>
+    </footer>
+
+    <!-- Enlazando con Materialize JS y jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Inicializando los componentes de Materialize
+            $('.carousel').carousel();
+            $('.collapsible').collapsible();
+        });
+
+        // Función para cambiar las imágenes automáticamente en la galería
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.gallery-slide');
+        const totalSlides = slides.length;
+
+        // Función para cambiar de imagen
+        function changeSlide() {
+            // Cambiar la posición del carrusel (galería)
+            const offset = -(currentSlide * 100) + '%';
+            document.querySelector('.gallery-slides').style.transform = `translateX(${offset})`;
+
+            // Avanzar a la siguiente imagen (ciclo)
+            currentSlide = (currentSlide + 1) % totalSlides;
+        }
+
+        // Iniciar el carrusel (cambiar de imagen cada 3 segundos)
+        setInterval(changeSlide, 3000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introducción a JavaScript</title>
+        <link rel="stylesheet" href="css/javascript.css">
+    </head>
+    <body>
+
+        <!-- Sección Identificación JavaScript -->
+        <section id="identificador">
+            <h1>¡Bienvenido a la Introducción a JavaScript!</h1>
+            <p>Este tutorial te ayudará a aprender los conceptos básicos de JavaScript, el lenguaje que hace las páginas web más dinámicas e interactivas.</p>
+            <a href="https://www.youtube.com/watch?v=QoC4RxNIs5M&t=1s&ab_channel=HolaMundo" target="_blank">
+                <img src="images/js.png" alt="Curso Javascript">
+            </a>
+        </section>
+
+        <section id="introduccion">
+            <h2>¿Qué es JavaScript?</h2>
+            <p>JavaScript es un lenguaje de programación de alto nivel utilizado principalmente para crear interactividad en páginas web. Es uno de los tres pilares fundamentales de la web, junto con HTML y CSS.</p>
+            <p>JavaScript permite manipular el DOM (Document Object Model), responder a eventos de los usuarios, y mucho más. Es un lenguaje interpretado, lo que significa que el código se ejecuta de forma inmediata en el navegador sin necesidad de ser compilado.</p>
+
+            <!-- Ejemplo 1: Uso de alert() -->
+            <div class="example">
+                <h3>Ejemplo 1: Uso de <code>alert()</code></h3>
+                <button id="alertButton" onclick="mostrarAlerta()">Mostrar Alerta</button>
+                <p>Este es un ejemplo de cómo mostrar una alerta en la página.</p>
+            </div>
+
+            <!-- Ejemplo 2: Mostrar fecha y hora -->
+            <div class="example">
+                <h3>Ejemplo 2: Mostrar fecha y hora actual</h3>
+                <button id="fechaButton" onclick="mostrarFechaHora()">Mostrar Fecha y Hora</button>
+                <p id="fechaTexto"></p>
+            </div>
+
+            <!-- Ejemplo 3: Uso de objetos (Browser BOM) -->
+            <div class="example">
+                <h3>Ejemplo 3: Uso de objetos (Browser BOM)</h3>
+                <button id="windowButton" onclick="mostrarInformacionWindow()">Mostrar Información de Window</button>
+                <p>Este ejemplo muestra cómo acceder al objeto <code>Window</code> y otros objetos como <code>Navigator</code> y <code>Location</code>.</p>
+            </div>
+
+            <!-- Ejemplo 4: Manipulación del DOM -->
+            <div class="example">
+                <h3>Ejemplo 4: Manipulación de DOM con <code>getElementById()</code></h3>
+                <button id="changeColorButton" onclick="cambiarColorTexto()">Cambiar Color</button>
+                <p id="textToChange">Este texto cambiará de color cuando hagas clic en el botón.</p>
+            </div>
+
+            <!-- Ejemplo 5: Validar un campo numérico -->
+            <div class="example">
+                <h3>Ejemplo 5: Validar un campo numérico</h3>
+                <input type="text" id="numeroInput" placeholder="Ingresa un número">
+                <button id="validarNumeroButton" onclick="validarNumero()">Validar</button>
+                <p id="validacionMensaje"></p>
+            </div>
+
+            <!-- Ejemplo 6: Manejo de eventos -->
+            <div class="example">
+                <h3>Ejemplo 6: Manejo de eventos con addEventListener()</h3>
+                <button id="eventButton" onclick="manejarEventoClick()">Clic para ver evento</button>
+                <p>Este es un ejemplo de cómo usar <code>addEventListener()</code> para manejar eventos.</p>
+            </div>
+
+            <!-- Ejemplo 7: Validación de formularios -->
+            <div class="example">
+                <h3>Ejemplo 7: Validación de Formularios</h3>
+                <form id="contactForm" onsubmit="validarFormulario(event)">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="formMessage"></p>
+            </div>
+        </section>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

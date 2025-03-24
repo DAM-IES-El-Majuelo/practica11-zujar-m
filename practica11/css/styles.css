@@ -1,0 +1,403 @@
+@media screen and (max-width: 768px) {
+    .contenido-container {
+        flex-direction: column;
+        padding: 5px;
+    }
+    .intro, .gallery {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #8ddef8, #ecfafe);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+header {
+    background-color: #34a0c3;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    position: relative; /* Necesario para que los submenús se posicionen con respecto a él */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #3bb4dc;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 20px;
+    display: block;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #277892;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4682b4;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Asegura que el menú esté encima de otros elementos */
+}
+
+nav ul li ul li {
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    color: white;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+nav ul li ul li a:hover {
+    background-color: #a4dbee;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+footer {
+    background-color: #2e8cab;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Contenedor principal para la sección */
+.contenido-container {
+    flex: 1; /* Hace que el contenido ocupe el espacio restante */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 1;
+    
+}
+
+/* Estilo para la columna izquierda (introducción) */
+.intro {
+    flex: 0 0 48%;
+    padding: 15px;
+    height: auto;
+}
+
+.intro h2 {
+    color: #2e8cab;
+    font-size: 1.8em;
+}
+
+.intro p {
+    font-size: 1em;
+    color: #589097;
+}
+
+/* Estilo para la columna derecha (galería de imágenes) */
+.gallery {
+    flex: 0 0 45%;
+    padding: 15px;
+    background-color: #dceff5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery h2 {
+    color: #2e8cab;
+    font-size: 1.8em;
+}
+
+
+/* Contenedor para las imágenes de la galería */
+.gallery-images {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.image-slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: left 1s ease, opacity 1s ease;
+}
+
+.image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hacemos que las imágenes se muestren de una en una */
+.image-slide.active {
+    left: 0;
+    opacity: 1;
+}
+
+/*Para las páginas*/
+#contenido {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+}
+
+/* La info que saldrá si no se puede acceder a la página clicada */
+.error-message {
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    flex-direction: column;
+    justify-content: center; /* Alineación vertical */
+    align-items: center; /* Alineación horizontal */
+    text-align: center;
+    padding: 10px;
+    background-color: #d7ecf8;
+    border: 1px solid #d7ecf8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centra el contenedor en su contenedor padre */
+    width: 80%; /* Ajusta el tamaño según sea necesario */
+}
+
+.error-message p {
+    font-size: 1.2em;
+    color: #217199;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.error-image {
+    width: 320px;
+    height: 320px;
+    object-fit: contain;
+    animation: latir 1.5s infinite;
+}
+
+
+@keyframes latir {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Sección identificadora para JavaScript */
+#identificador {
+    background-color: #9CCEE0;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+}
+
+#identificador h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+#identificador p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Sección de introducción */
+#introduccion {
+    padding: 20px;
+    margin: 0 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+/* Estilo para los ejemplos */
+.example {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.example h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #24A8D2;
+}
+
+.example button {
+    background-color: #4CABC9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.example button:hover {
+    background-color: #78CFEA;
+}
+
+/* Estilo para los campos del formulario */
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #99C9D8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #668C98;
+}
+
+/* Mensajes de validación */
+#validacionMensaje {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#formMessage {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/*LOS ESTILOS DE COMPARAR*/
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #24A8D2;
+}
+
+/* Sección de introducción */
+#introduccion {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla de comparación */
+#comparacion {
+    margin: 20px;
+}
+
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #64A7BF;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Sección de conclusión */
+#conclusion {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

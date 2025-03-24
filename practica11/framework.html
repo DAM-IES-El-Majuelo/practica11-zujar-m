@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Node.js Frameworks: Frontend, Backend y Fullstack</title>
+        <link rel="stylesheet" href="css/stylesfm.css">
+    </head>
+
+    <body>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="brand-logo">Node.js Frameworks</a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="#frontend">Frontend</a></li>
+                    <li><a href="#backend">Backend</a></li>
+                    <li><a href="#fullstack">Fullstack</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <!-- Sección Frontend -->
+        <section id="frontend" class="section">
+            <div class="container">
+                <h2 class="section-title">Frontend con Node.js</h2>
+                <p>El <strong>Frontend</strong> se refiere a la parte de la aplicación con la que los usuarios interactúan directamente. Utilizamos herramientas como <strong>React.js</strong>, <strong>Vue.js</strong> y <strong>Angular</strong> junto con Node.js para crear interfaces de usuario dinámicas e interactivas.</p>
+                <p>En esta sección, veamos cómo se renderiza una página con <strong>React.js</strong>.</p>
+                <div class="example-box">
+
+                    <h3>Ejemplo de React.js</h3>
+
+                    <div class="example-code">
+                        <pre>
+import React from 'react';
+
+
+export default App;
+                        </pre>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="showMessage('¡Gracias por explorar el Frontend!')">Haz clic aquí</button>
+
+            </div>
+        </section>
+
+        <!-- Sección Backend -->
+        <section id="backend" class="section">
+            <div class="container">
+                <h2 class="section-title">Backend con Node.js</h2>
+                <p>El <strong>Backend</strong> maneja la lógica de la aplicación, la base de datos y las peticiones HTTP. Con Node.js, utilizamos frameworks como <strong>Express.js</strong> para construir servidores rápidos y eficientes.</p>
+                <p>En esta sección, veremos cómo crear un servidor básico con Node.js y Express.js.</p>
+                <div class="example-box">
+                    <h3>Ejemplo de Express.js (Backend)</h3>
+                    <div class="example-code">
+                        <pre>
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('¡Hola desde el Backend con Node.js!');
+});
+
+app.listen(3000, () => {
+    console.log('Servidor corriendo en http://localhost:3000');
+});
+                        </pre>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" onclick="showMessage('¡Gracias por explorar el Backend!')">Haz clic aquí</button>
+            </div>
+        </section>
+
+        <!-- Sección Fullstack Emergentes -->
+        <section id="fullstack" class="section">
+            <div class="container">
+                <h2 class="section-title">Fullstack Emergentes con Node.js</h2>
+                <p>Las aplicaciones <strong>Fullstack</strong> combinan tanto el frontend como el backend, utilizando tecnologías como <strong>Next.js</strong> para la renderización en el lado del servidor y la creación de APIs RESTful.</p>
+                <p>Veamos cómo una aplicación Fullstack con Next.js maneja el frontend y backend en el mismo proyecto.</p>
+                <div class="example-box">
+                    <h3>Ejemplo de Next.js (Fullstack)</h3>
+                    <div class="example-code">
+                        <pre>
+import React from 'react';
+
+export default function Home() {
+    return (
+        <div>
+            <h1>¡Bienvenido a una app Fullstack con Next.js!</h1>
+            <p>Este es un ejemplo donde React y Node.js se combinan en una única aplicación Fullstack.</p>
+        </div>
+    );
+}
+                        </pre>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="showMessage('¡Gracias por explorar el Fullstack!')">Explorar Fullstack</button>
+            </div>
+        </section>
+
+        <!-- Ventanas de navegador (Viewport) -->
+        <section id="viewport" class="section">
+            <div class="container">
+                <h2 class="section-title">Ventanas de Navegador (Viewport)</h2>
+                <p>El <strong>Viewport</strong> es el área visible en la pantalla donde se renderiza la aplicación. Es crucial tener en cuenta el tamaño de la ventana del navegador para crear aplicaciones web responsivas.</p>
+                <p>Veamos cómo cambiar el diseño de una página según el tamaño del viewport.</p>
+                <div class="example-box">
+                    <h3>Ejemplo de Responsividad (Viewport)</h3>
+                    <div class="example-code">
+                        <pre>
+/* CSS para viewport */
+@media screen and (max-width: 768px) {
+    .responsive-container {
+        background-color: lightblue;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .responsive-container {
+        background-color: lightgreen;
+    }
+}
+                        </pre>
+                    </div>
+                    <div class="responsive-container">
+                        <p>Este fondo cambia de color dependiendo del tamaño de la ventana del navegador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title">Galería de Imágenes</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/frontend.png" alt="Imagen 1" class="gallery-img" onclick="openModal(this)">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/nodejs.png" alt="Imagen 2" class="gallery-img" onclick="openModal(this)">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/fullstack.png" alt="Imagen 3" class="gallery-img" onclick="openModal(this)">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para mostrar imagen en grande -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
+        <!DOCTYPE html>
+    <html lang="es">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Node.js Frameworks: Frontend, Backend y Fullstack</title>
+            <link rel="stylesheet" href="css/stylesfm.css">
+        </head>
+
+        <body>
+            <!-- Barra de navegación -->
+            <nav class="navbar">
+                <div class="container">
+                    <a href="#" class="brand-logo">Node.js Frameworks</a>
+                    <ul id="nav-mobile" class="right">
+                        <li><a href="#frontend">Frontend</a></li>
+                        <li><a href="#backend">Backend</a></li>
+                        <li><a href="#fullstack">Fullstack</a></li>
+                        <li><a href="#gallery">Galería</a></li>
+                        <li><a href="#videos">Vídeos</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+            <!-- Sección Frontend -->
+            <section id="frontend" class="section">
+                <div class="container">
+                    <h2 class="section-title">Frontend con Node.js</h2>
+                    <p>El <strong>Frontend</strong> se refiere a la parte de la aplicación con la que los usuarios interactúan directamente. Utilizamos herramientas como <strong>React.js</strong>, <strong>Vue.js</strong> y <strong>Angular</strong> junto con Node.js para crear interfaces de usuario dinámicas e interactivas.</p>
+                    <p>En esta sección, veamos cómo se renderiza una página con <strong>React.js</strong>.</p>
+                    <div class="example-box">
+
+                        <h3>Ejemplo de React.js</h3>
+
+                        <div class="example-code">
+                            <pre>
+import React from 'react';
+
+
+export default App;
+                            </pre>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="showMessage('¡Gracias por explorar el Frontend!')">Haz clic aquí</button>
+
+                </div>
+            </section>
+
+            <!-- Sección Backend -->
+            <section id="backend" class="section">
+                <div class="container">
+                    <h2 class="section-title">Backend con Node.js</h2>
+                    <p>El <strong>Backend</strong> maneja la lógica de la aplicación, la base de datos y las peticiones HTTP. Con Node.js, utilizamos frameworks como <strong>Express.js</strong> para construir servidores rápidos y eficientes.</p>
+                    <p>En esta sección, veremos cómo crear un servidor básico con Node.js y Express.js.</p>
+                    <div class="example-box">
+                        <h3>Ejemplo de Express.js (Backend)</h3>
+                        <div class="example-code">
+                            <pre>
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('¡Hola desde el Backend con Node.js!');
+});
+
+app.listen(3000, () => {
+    console.log('Servidor corriendo en http://localhost:3000');
+});
+                            </pre>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="showMessage('¡Gracias por explorar el Backend!')">Haz clic aquí</button>
+                </div>
+            </section>
+
+            <!-- Sección Fullstack Emergentes -->
+            <section id="fullstack" class="section">
+                <div class="container">
+                    <h2 class="section-title">Fullstack Emergentes con Node.js</h2>
+                    <p>Las aplicaciones <strong>Fullstack</strong> combinan tanto el frontend como el backend, utilizando tecnologías como <strong>Next.js</strong> para la renderización en el lado del servidor y la creación de APIs RESTful.</p>
+                    <p>Veamos cómo una aplicación Fullstack con Next.js maneja el frontend y backend en el mismo proyecto.</p>
+                    <div class="example-box">
+                        <h3>Ejemplo de Next.js (Fullstack)</h3>
+                        <div class="example-code">
+                            <pre>
+import React from 'react';
+
+export default function Home() {
+    return (
+        <div>
+            <h1>¡Bienvenido a una app Fullstack con Next.js!</h1>
+            <p>Este es un ejemplo donde React y Node.js se combinan en una única aplicación Fullstack.</p>
+        </div>
+    );
+}
+                            </pre>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="showMessage('¡Gracias por explorar el Fullstack!')">Explorar Fullstack</button>
+                </div>
+            </section>
+
+            <!-- Ventanas de navegador (Viewport) -->
+            <section id="viewport" class="section">
+                <div class="container">
+                    <h2 class="section-title">Ventanas de Navegador (Viewport)</h2>
+                    <p>El <strong>Viewport</strong> es el área visible en la pantalla donde se renderiza la aplicación. Es crucial tener en cuenta el tamaño de la ventana del navegador para crear aplicaciones web responsivas.</p>
+                    <p>Veamos cómo cambiar el diseño de una página según el tamaño del viewport.</p>
+                    <div class="example-box">
+                        <h3>Ejemplo de Responsividad (Viewport)</h3>
+                        <div class="example-code">
+                            <pre>
+/* CSS para viewport */
+@media screen and (max-width: 768px) {
+    .responsive-container {
+        background-color: lightblue;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .responsive-container {
+        background-color: lightgreen;
+    }
+}
+                            </pre>
+                        </div>
+                        <div class="responsive-container">
+                            <p>Este fondo cambia de color dependiendo del tamaño de la ventana del navegador.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galería -->
+            <section id="gallery" class="section">
+                <div class="container">
+                    <h2 class="section-title">Galería de Imágenes</h2>
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="images/frontend.png" alt="Imagen 1" class="gallery-img" onclick="openModal(this)">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/nodejs.png" alt="Imagen 2" class="gallery-img" onclick="openModal(this)">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/fullstack.png" alt="Imagen 3" class="gallery-img" onclick="openModal(this)">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modal para mostrar imagen en grande -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <!-- Sección Vídeos -->
+            <section id="videos" class="section">
+                <div class="container">
+                    <h2 class="section-title">Vídeos sobre Node.js</h2>
+                    <div class="video-gallery">
+                        <!-- Vídeo 1 -->
+                        <div class="video-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xJzzu7MVZXw?si=9cR2MNHQE4wIYdio" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </div>
+                        <!-- Vídeo 2 -->
+                        <div class="video-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_xL4oil0gQo?si=OLJrTzc1pI_r2FDt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </div>
+                        <!-- Vídeo 3 -->
+                        <div class="video-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yB4n_K7dZV8?si=OpvGE5w0xz_2KheV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2025 Frameworks con Node.js</p>
+            </footer>
+
+            <script src="js/scriptfm.js"></script>
+        </body>
+
+    </html>
+
+
+  
+    <script src="js/scriptfm.js"></script>
+</body>
+
+</html>

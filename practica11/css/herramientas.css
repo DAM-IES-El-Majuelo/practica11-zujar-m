@@ -1,0 +1,152 @@
+/* Herramientas de desarrollo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el header */
+header {
+    background-color: #34a0c3;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal */
+.contenido-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Sección de introducción */
+.intro {
+    flex: 0 0 48%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    color: #2e8cab;
+    font-size: 1.8em;
+}
+
+.intro p {
+    font-size: 1.1em;
+    color: #589097;
+}
+
+.toggle-btn {
+    background-color: #34a0c3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.toggle-btn:hover {
+    background-color: #277892;
+}
+
+/* Detalles ocultos */
+.details {
+    display: none; 
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #2e8cab;
+}
+
+.details ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.details li {
+    margin-bottom: 10px;
+}
+
+/* Muestra los detalles cuando se añade la clase 'show' */
+.details.show {
+    display: block;
+}
+
+/* Estilo para la galería de herramientas */
+.gallery {
+    flex: 1;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.gallery h2 {
+    color: #2e8cab;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.tools-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.tool-card {
+    text-align: center;
+    width: 50px;
+    padding: 10px;
+    background-color: #dceff5;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+     float: left;
+}
+
+.tool-card:hover {
+    transform: scale(1.05);
+}
+
+.tool-card img {
+    width: 30%;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tool-card p {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #2e8cab;
+    text-align: center;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #2e8cab;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}

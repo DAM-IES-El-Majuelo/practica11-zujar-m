@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <!-- Enlazando con Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://via.placeholder.com/32" type="image/ico">
+    <!-- Iconos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="images/bootstrap_icon.png" type="image/png">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #6f42c1; /* Morado Bootstrap */
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-item:hover .nav-link {
+            color: #f4f4f9 !important;
+        }
+
+        h1, h2, h3 {
+            color: #4e2a84; /* Morado oscuro */
+        }
+
+        .hero-section {
+            background-color: #9c6de7;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-primary {
+            background-color: #6f42c1;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #5a2d9f;
+        }
+
+        .footer {
+            background-color: #6f42c1;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 15px;
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .sidebar {
+            background-color: #e9d9f7;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #6f42c1;
+            display: block;
+            margin: 12px 0;
+            font-size: 1.1rem;
+        }
+
+        .sidebar a:hover {
+            color: #5a2d9f;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            border-radius: 10px;
+            border: 1px solid #9c6de7;
+        }
+
+        .contact-form button {
+            background-color: #6f42c1;
+            border: none;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .contact-form button:hover {
+            background-color: #5a2d9f;
+        }
+
+        .card-title {
+            color: #4e2a84;
+        }
+
+        .card-text {
+            color: #7c4d94;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Página Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us" id="about-link">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Bootstrap</h1>
+            <p>Usamos Bootstrap para crear páginas rápidas, responsivas y modernas. Explora nuestros ejemplos.</p>
+            <a href="#about-us" class="btn btn-primary btn-lg">Aprende Más</a>
+        </div>
+    </section>
+
+    <!-- Sección sobre Bootstrap -->
+    <section id="about-us" class="container mt-5">
+        <h2>¿Qué es Bootstrap?</h2>
+        <p><strong>Bootstrap</strong> es un framework de desarrollo web de código abierto que facilita la creación de sitios web y aplicaciones web modernas, responsivas y con un diseño atractivo. Fue creado por <strong>Twitter</strong> en 2011 por Mark Otto y Jacob Thornton, con el objetivo de ofrecer herramientas predefinidas para el desarrollo rápido de interfaces web.</p>
+        <p>Bootstrap proporciona una serie de componentes como botones, formularios, tarjetas, menús de navegación, y mucho más. Todo esto es fácilmente personalizable para adaptarse a las necesidades de tu proyecto.</p>
+        <h3>¿Para qué se usa Bootstrap?</h3>
+        <ul>
+            <li>Creación rápida de interfaces web responsivas que se adaptan a diferentes tamaños de pantalla.</li>
+            <li>Diseño consistente en todos los navegadores y dispositivos.</li>
+            <li>Implementación de componentes listos para usar como botones, formularios, alertas, menús de navegación, y tablas.</li>
+            <li>Facilita la personalización del diseño mediante un sistema de clases CSS.</li>
+            <li>Optimización del desarrollo con JavaScript para crear interactividad (como modales, menús desplegables, y más).</li>
+        </ul>
+        <p>Bootstrap es ampliamente utilizado en proyectos web modernos debido a su facilidad de uso y flexibilidad.</p>
+    </section>
+
+    <!-- Sidebar -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="#home">Inicio</a>
+                    <a href="#about-us" id="about-link">Sobre Nosotros</a>
+                    <a href="#services">Servicios</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+            </div>
+
+            <!-- Ejemplos -->
+            <div class="col-md-8">
+                <!-- Tarjetas -->
+                <h2>Ejemplo de Tarjetas</h2>
+                <div class="card-group">
+                    <div class="card">
+                        <img src="images/bootstrap_icon.png" class="card-img-top" alt="Imagen de ejemplo">
+                        <div class="card-body">
+                            <h5 class="card-title">Título de la tarjeta</h5>
+                            <p class="card-text">Este es un ejemplo de una tarjeta en Bootstrap. Puedes agregar imágenes, texto y enlaces.</p>
+                            <a href="#services" class="btn btn-primary">Ir al Enlace</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/bootstrap_icon1.png" class="card-img-top" alt="Imagen de ejemplo">
+                        <div class="card-body">
+                            <h5 class="card-title">Otro Título</h5>
+                            <p class="card-text">Este es otro ejemplo de tarjeta. Los diseños de Bootstrap son fáciles de usar y configurar.</p>
+                            <a href="#contact" class="btn btn-primary">Ir al Enlace</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <h2 id="contact" class="mt-5">Contáctanos</h2>
+                <form class="contact-form">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Mi Página Web</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" class="bi bi-facebook" title="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" class="bi bi-twitter" title="Twitter"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="bi bi-linkedin" title="LinkedIn"></a>
+            <a href="https://www.instagram.com" target="_blank" class="bi bi-instagram" title="Instagram"></a>
+        </div>
+    </footer>
+
+    <!-- Enlazando con Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Script para el Alert -->
+    <script>
+        document.getElementById('about-link').addEventListener('click', function (e) {
+            e.preventDefault();  // Evita que se desplace hacia la sección 'Sobre Nosotros'
+
+            // Mostrar alerta de Bootstrap
+            alert('Bootstrap es un framework de código abierto para diseñar interfaces web responsivas. Proporciona componentes predefinidos como botones, formularios, y navegación.');
+        });
+    </script>
+
+</body>
+
+</html>

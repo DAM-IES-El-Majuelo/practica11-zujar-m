@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery</title>
+        <link rel="icon" href="images/jquery.png" type="image/png">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+
+            header {
+                background-color: #007bff;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .container {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            h1 {
+                color: #007bff;
+            }
+
+            section {
+                background-color: white;
+                padding: 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+            }
+
+            .btn {
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+            .hidden-content {
+                display: none;
+                margin-top: 10px;
+                padding: 10px;
+                background-color: #f1f1f1;
+                border-radius: 5px;
+                border: 1px solid #ddd;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Bienvenidos a Mi Página Web con jQuery</h1>
+        </header>
+
+        <div class="container">
+
+            <!-- Sección Principal -->
+            <section>
+                <h2>Sobre Nosotros</h2>
+                <p>En esta sección, aprenderás más sobre nuestra empresa y los servicios que ofrecemos.</p>
+                <button id="aboutUsBtn" class="btn">Mostrar Más Información</button>
+                <div id="aboutUsContent" class="hidden-content">
+                    <p>Somos una empresa dedicada a crear experiencias interactivas utilizando tecnologías web modernas como jQuery, HTML, CSS y JavaScript. ¡Nos apasiona lo que hacemos!</p>
+                </div>
+            </section>
+
+            <!-- Sección Qué es jQuery -->
+            <section>
+                <h2>¿Qué es jQuery?</h2>
+                <p><strong>jQuery</strong> es una popular biblioteca de JavaScript diseñada para simplificar la programación de eventos, animaciones, manipulaciones de HTML y AJAX. jQuery hace que las tareas comunes que normalmente requieren varias líneas de código en JavaScript se puedan realizar con solo unas pocas líneas. Esto hace que el desarrollo web sea más rápido y sencillo.</p>
+                <h3>¿Para qué se usa jQuery?</h3>
+                <ul>
+                    <li><strong>Manipulación del DOM:</strong> jQuery permite cambiar fácilmente el contenido de la página web, como agregar, eliminar o modificar elementos HTML.</li>
+                    <li><strong>Interacciones con el usuario:</strong> Puedes agregar efectos interactivos como la animación de elementos, mostrar u ocultar contenido, y responder a eventos de clic, desplazamiento, etc.</li>
+                    <li><strong>AJAX:</strong> jQuery facilita la carga de datos de manera asíncrona sin necesidad de recargar toda la página, lo que mejora la experiencia del usuario.</li>
+                    <li><strong>Compatibilidad entre navegadores:</strong> jQuery se encarga de las diferencias entre los navegadores, permitiendo que tu código funcione en todos ellos sin problemas.</li>
+                </ul>
+                <h3>Ventajas de usar jQuery</h3>
+                <ul>
+                    <li>Menos código: jQuery permite hacer más con menos líneas de código.</li>
+                    <li>Fácil de aprender y usar: Su sintaxis es sencilla y fácil de entender.</li>
+                    <li>Gran comunidad: Al ser muy popular, tiene una amplia comunidad y mucha documentación para ayudarte.</li>
+                </ul>
+            </section>
+
+            <!-- Sección Servicios -->
+            <section>
+                <h2>Servicios</h2>
+                <p>Descubre los servicios que ofrecemos a nuestros clientes.</p>
+                <button class="btn service-btn" data-service="Diseño Web">Ver Más sobre Diseño Web</button>
+                <button class="btn service-btn" data-service="Desarrollo de Aplicaciones">Ver Más sobre Desarrollo de Aplicaciones</button>
+                <button class="btn service-btn" data-service="Consultoría">Ver Más sobre Consultoría</button>
+            </section>
+
+            <!-- Sección Contacto -->
+            <section>
+                <h2>Contáctanos</h2>
+                <p>Déjanos tu mensaje, y estaremos encantados de responderte lo antes posible.</p>
+                <form id="contactForm">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" required><br><br>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" required><br><br>
+                    <label for="message">Mensaje:</label><br>
+                    <textarea id="message" required></textarea><br><br>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </section>
+
+        </div>
+
+        <!-- Script jQuery -->
+        <script>
+            $(document).ready(function () {
+
+                // Mostrar/Ocultar más información de "Sobre Nosotros"
+                $("#aboutUsBtn").click(function () {
+                    $("#aboutUsContent").slideToggle("slow");
+                });
+
+                // Mostrar un mensaje personalizado cuando se hace clic en los botones de servicio
+                $(".service-btn").click(function () {
+                    var service = $(this).data("service");
+                    alert("Estás viendo más sobre: " + service);
+                });
+
+                // Evitar el comportamiento predeterminado del formulario de contacto y mostrar un mensaje
+                $("#contactForm").submit(function (event) {
+                    event.preventDefault();
+                    var name = $("#name").val();
+                    var email = $("#email").val();
+                    var message = $("#message").val();
+                    alert("Gracias por tu mensaje, " + name + "! Te responderemos pronto a " + email + ".");
+                    // Puedes agregar más lógica aquí para enviar datos al servidor si lo deseas.
+                });
+
+            });
+        </script>
+
+    </body>
+
+</html>

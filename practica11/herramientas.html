@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Herramientas de Desarrollo Web</title>
+        <link rel="stylesheet" href="css/herramientas.css"> <!-- Nuevo archivo CSS para herramientas -->
+    </head>
+    <body>
+
+        <header>
+            <h1>Herramientas de Desarrollo de un Navegador Web</h1>
+            <p>Las herramientas de desarrollo en los navegadores permiten a los desarrolladores web inspeccionar, depurar y optimizar aplicaciones en tiempo real. Facilitan la modificación de HTML, CSS, y JavaScript sin recargar la página, y ayudan a identificar problemas de rendimiento y accesibilidad.</p>
+            <p>Entre las herramientas más comunes se encuentran el Inspector de Elementos, la Consola JavaScript y las herramientas para auditar el rendimiento y simular dispositivos. Están disponibles en navegadores como Chrome, Firefox, Safari y Edge, y son útiles tanto para desarrolladores expertos como para principiantes.</p>
+            <p>Estas herramientas evolucionan constantemente, añadiendo nuevas funciones para mejorar la velocidad, seguridad y accesibilidad de las aplicaciones web, además de ser esenciales para pruebas de calidad y optimización de SEO.</p>
+
+        </header>
+
+        <main>
+            <section class="contenido-container">
+                <div class="intro">
+                    <h2>¿Qué son las herramientas de desarrollo?</h2>
+                    <p>Las herramientas de desarrollo de un navegador son esenciales para depurar, analizar y mejorar el rendimiento de una página web. Están disponibles en la mayoría de los navegadores como Chrome, Firefox y Safari. Estas herramientas permiten a los desarrolladores inspeccionar el código fuente de una página web, hacer cambios en tiempo real y detectar problemas relacionados con el rendimiento, la accesibilidad y la seguridad. También ayudan en la depuración de JavaScript, la optimización de imágenes, la prueba de diseño en diferentes dispositivos y la gestión de cookies y almacenamiento local.</p>
+                    <p>Algunos ejemplos clave de estas herramientas incluyen el inspector de elementos, la consola JavaScript, el depurador, las auditorías de rendimiento, y la emulación de diferentes resoluciones de pantalla. Estas herramientas han mejorado enormemente la experiencia de desarrollo y permiten una corrección rápida de errores, lo que facilita una mejor experiencia para el usuario final. Además, algunas herramientas ofrecen integraciones con plataformas de pruebas automáticas y análisis de código para mejorar la calidad general del sitio web.</p>
+                    <p>El uso de estas herramientas no solo ayuda a los desarrolladores a crear aplicaciones web más rápidas y eficientes, sino que también promueve las mejores prácticas de desarrollo, como la optimización de recursos, la accesibilidad para personas con discapacidades y el cumplimiento de los estándares web. La disponibilidad de herramientas de desarrollo también ha permitido a los diseñadores y desarrolladores experimentar de manera más ágil con nuevas ideas y características sin necesidad de realizar implementaciones complicadas.</p>
+                    <p>Hoy en día, muchas de estas herramientas de desarrollo están integradas de manera tan eficiente en los navegadores que no solo sirven a los desarrolladores web, sino también a los diseñadores, testers, y cualquier persona interesada en comprender cómo funciona un sitio web o aplicación. Además, las actualizaciones periódicas de estas herramientas aseguran que se mantengan al día con las últimas tendencias en tecnología web, ayudando a los desarrolladores a adaptarse rápidamente a nuevas tecnologías y metodologías de desarrollo.</p>
+ 
+                   <button class="toggle-btn" onclick="toggleDetails()">Mostrar más detalles</button>
+
+                    <div id="details" class="details" style="display: none;">
+                        <h3>Funciones Principales</h3>
+                        <ul>
+                            <li><strong>Inspección de elementos:</strong> Permite ver y modificar el HTML y CSS de una página en tiempo real.</li>
+                            <li><strong>Consola JavaScript:</strong> Ejecuta código JavaScript y verifica errores.</li>
+                            <li><strong>Depuración de código:</strong> Puedes poner puntos de interrupción y verificar cómo se ejecuta tu código.</li>
+                            <li><strong>Auditoría de rendimiento:</strong> Analiza el rendimiento de carga de la página.</li>
+                            <li><strong>Simulación de dispositivos:</strong> Prueba cómo se ve tu página en diferentes dispositivos móviles.</li>
+                        </ul>
+                    </div>
+
+                    <div id="extra-details" class="extra-details" >
+                        <h3>Más sobre las Herramientas de Desarrollo</h3>
+                        <p>Las herramientas de desarrollo no solo se limitan a la depuración de código y el análisis de rendimiento. También ofrecen funcionalidades avanzadas como la simulación de redes, la visualización de las solicitudes de la API y la gestión de las cookies y el almacenamiento local.</p>
+
+                        <h4>Simulación de Redes y APIs</h4>
+                        <p>Permiten a los desarrolladores simular diferentes condiciones de red (por ejemplo, 3G o desconectado) para ver cómo se comporta la página bajo esas condiciones. También puedes inspeccionar todas las solicitudes realizadas a la API, ver sus respuestas y tiempos de carga.</p>
+
+                        <h4>Gestión de Cookies y Almacenamiento Local</h4>
+                        <p>Las herramientas de desarrollo permiten gestionar las cookies y el almacenamiento local del navegador. Esto te permite ver y modificar los datos almacenados, lo que es útil para realizar pruebas y asegurarte de que todo funcione correctamente cuando los usuarios regresen a tu página.</p>
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <h2>Herramientas Populares</h2>
+                    <div class="tools-gallery">
+                        <div class="tool-card">
+                            <a href="https://developer.chrome.com/?hl=es-419" target="_blank">
+                                <img src="images/chromedevtool.png" alt="Chrome DevTools">
+                            </a>
+                            <p><strong>Chrome DevTools</strong></p>
+                        </div>
+                        <div class="tool-card">
+                            <a href="https://developer.mozilla.org/en-US/docs/Tools" target="_blank">
+                                <img src="images/firefoxdev.png" alt="Firefox Developer Tools">
+                            </a>
+                            <p><strong>Firefox Developer Tools</strong></p>
+                        </div>
+                        <div class="tool-card">
+                            <a href="https://developer.apple.com/safari/tools/" target="_blank">
+                                <img src="images/safariweb.png" alt="Safari Web Inspector">
+                            </a>
+                            <p><strong>Safari Web Inspector</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
